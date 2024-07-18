@@ -7,13 +7,12 @@ const cookiesParser = require('cookie-parser')
 const { app, server } = require('./socket/index')
 
 
-app.use(cors({
-    origin : "https://chat-app-frontend-im7o.onrender.com",
-    credentials : true
-}))
+const corsOptions = {
+    origin : "https://chat-app-frontend-im7o.onrender.com"
+}
 app.use(express.json())
-app.use(cors(corsOptions));
 app.use(cookiesParser())
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 8080
 
