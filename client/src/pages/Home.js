@@ -8,7 +8,6 @@ import Sidebar from '../components/Sidebar'
 import { logout, setOnlineUser, setSocketConnection, setUser } from '../redux/userSlice'
 
 const Home = () => {
-  const url ="https://chat-app-backend-6xgn.onrender.com"
   const user = useSelector(state => state.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()
