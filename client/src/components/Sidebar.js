@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import { IoChatbubbleEllipses } from "react-icons/io5";
-import { FaUserPlus } from "react-icons/fa";
-import { NavLink, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import { BiLogOut } from "react-icons/bi";
-import Avatar from './Avatar'
-import { useDispatch, useSelector } from 'react-redux';
-import EditUserDetails from './EditUserDetails';
-import Divider from './Divider';
+import { FaUserPlus } from "react-icons/fa";
+import { FaImage, FaVideo } from "react-icons/fa6";
 import { FiArrowUpLeft } from "react-icons/fi";
-import SearchUser from './SearchUser';
-import { FaImage } from "react-icons/fa6";
-import { FaVideo } from "react-icons/fa6";
+import { IoChatbubbleEllipses } from "react-icons/io5";
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { logout } from '../redux/userSlice';
+import Avatar from './Avatar';
+import EditUserDetails from './EditUserDetails';
+import SearchUser from './SearchUser';
 
 const Sidebar = () => {
+    const url = "https://chat-app-backend-6xgn.onrender.com";
     const user = useSelector(state => state?.user)
     const [editUserOpen,setEditUserOpen] = useState(false)
     const [allUser,setAllUser] = useState([])
