@@ -6,7 +6,7 @@ const router = require('./routes/index')
 const cookiesParser = require('cookie-parser')
 const { app, server } = require('./socket/index')
 
-const app = express()
+
 app.use(cors({
     origin : "https://chat-app-frontend-im7o.onrender.com",
     credentials : true
