@@ -2,12 +2,13 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom'
-import { logout, setOnlineUser, setSocketConnection, setUser } from '../redux/userSlice'
-import Sidebar from '../components/Sidebar'
-import logo from '../assets/logo.png'
 import io from 'socket.io-client'
+import logo from '../assets/logo.png'
+import Sidebar from '../components/Sidebar'
+import { logout, setOnlineUser, setSocketConnection, setUser } from '../redux/userSlice'
 
 const Home = () => {
+  const url ="https://chat-app-backend-6xgn.onrender.com"
   const user = useSelector(state => state.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()

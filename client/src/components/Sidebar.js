@@ -12,7 +12,6 @@ import EditUserDetails from './EditUserDetails';
 import SearchUser from './SearchUser';
 
 const Sidebar = () => {
-    const url = "https://chat-app-backend-6xgn.onrender.com";
     const user = useSelector(state => state?.user)
     const [editUserOpen,setEditUserOpen] = useState(false)
     const [allUser,setAllUser] = useState([])
